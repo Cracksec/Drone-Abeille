@@ -9,13 +9,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(10);
-  if (digitalRead(inter) == HIGH){
-  analogWrite(moteur, 191);
+  if (digitalRead(inter) == HIGH){   //Si la couleur capté correspond à la couleur de la fleur (précision avec RGB)
+  analogWrite(moteur, 191); //On fait tourner le moteur
   }
   else
   {
-    delay(10);
-    analogWrite(moteur, 0);
+    analogWrite(moteur, 0); //sinon le moteur ne tourne pas
     }
 }
